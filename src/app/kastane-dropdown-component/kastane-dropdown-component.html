@@ -1,0 +1,42 @@
+<form>
+  <div
+    class="d-inline-block"
+    placement="bottom-left"
+    ngbDropdown
+    #myDrop="ngbDropdown"
+  >
+    <button
+      [ngClass]="{ 'btn-outline-gray': outline, 'btn-sm': small, 'btn-white': small }"
+      class="btn btn-dropdown form-control mr-2"
+      id="dropdownMenu"
+      ngbDropdownAnchor
+      (focus)="myDrop.open()"
+    >
+      {{selectedItem? selectedItem[nameField] : ''}}
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownMenu">
+      <button
+        ngbDropdownItem
+        *ngFor="let opt of options"
+        (click)="handleOnChange(opt)"
+      >
+        {{opt[nameField]}}
+      </button>
+    </div>
+  </div>
+</form>
+
+<div ngbDropdown placement="bottom-left" class="d-inline-block">
+  <button
+    class="btn btn-outline-primary form-control"
+    id="dropdownBasic2"
+    ngbDropdownToggle
+  >
+    Toggle dropup
+  </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+    <button class="dropdown-item">Action - 1</button>
+    <button class="dropdown-item">Another Action</button>
+    <button class="dropdown-item">Something else is here</button>
+  </div>
+</div>

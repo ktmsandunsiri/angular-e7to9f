@@ -1,0 +1,258 @@
+p {
+  font-family: Lato;
+}
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #F6F6FB !important;
+}
+.btn-prominent{
+  min-width: 160px !important;
+}
+.fa-question-circle{
+  color: #9D9BAE;
+}
+.card{
+  border-radius: 20px;
+}
+.tooltip {
+ font-size: 12px !important;
+}
+.card-is-invalid{
+  border: 1px solid !important;
+  border-color: #dc3545 !important;
+}
+.view-dropdown .dropdown .dropdown-toggle::after, .dropup .dropdown-toggle::after {
+  display: none !important;
+ }
+
+
+
+//disable btn
+.btn.disabled:hover{
+  box-shadow: none !important;
+}
+.btn-outline-primary.disabled, .btn-outline-primary:disabled:hover {
+  box-shadow: none !important;
+}
+
+//custom checkbox
+.custom-checkbox{
+  .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: #921FFE !important;
+  }
+} 
+.custom-control-label::before {
+  border: 2px solid #9D9BAE !important;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.line-height-0{
+  line-height: unset !important;
+}
+//custom checkbox end
+
+
+// .ease-expand-in {
+//     flex-shrink: 1;
+//     transition: all 400ms ease;
+// }
+
+// .ease-expand-out {
+//     flex-grow: 1;
+//     transition: all 400ms ease;
+// }
+
+.row [class*='col-'] {
+  transition: all .5s ease-in-out;
+}
+
+.graph-area{
+  transition: none !important;
+}
+
+.apexcharts-canvas {
+  transition: all .5s ease-in-out;
+
+  svg {
+      &:first-child {
+          width: 100%;
+      }
+  }
+
+  text {
+      font-size: 14px;
+      font-weight: 600;
+  }
+
+  .apexcharts-menu-icon {
+      display: none;
+  }
+
+  .apexcharts-title-text {
+    display: none;
+  }
+
+  .apexcharts-toolbar {
+      display: none;
+  }
+}
+
+.dashboard-container {
+  // transition: all 0.25s ease-in-out;
+  transition: all .5s ease-in-out;
+  .apexcharts-canvas {
+      transition: all .5s ease-in-out;
+      .trend_tooltip {
+          padding: 6px 22px;
+          font-size: 16px;
+          color: #ffffff;
+      }
+      // .apexcharts-tooltip {
+      //     height: 30px;
+      //     width: 56px;
+      //     border: 2px solid #000000;
+      //     background:  rgba(0, 0, 0, 0.5);
+
+      //     .trend_tooltip {
+      //         padding: 6px 22px;
+      //         font-size: 16px;
+      //         color: #ffffff;
+      //     }
+      // }
+  }
+}
+.dashboard-container {
+  .tab {
+      .nav-pills {
+          .nav-link {
+              font-size: 12px !important;
+              padding: 5px 22px !important;
+          }
+      }
+  }
+}
+
+.dashboard-bar-graph {
+  transition: all .5s ease-in-out;
+  .apexcharts-yaxis {
+      display: none;
+  }
+}
+
+.trends-line-graph, .apexcharts-svg {
+  transition: all .5s ease-in-out;
+}
+
+//validation
+.invalid-feedback {
+  color: #dc3545 !important;
+}
+.custom-select.is-invalid, .form-control.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.was-validated {
+  .custom-select:invalid, .form-control:invalid {
+    border-color: #dc3545 !important;
+  }
+}
+
+//ngb form select
+.form-select{
+  .dropdown{
+      width: 100%;
+
+      button{
+          width: 100%;
+          text-align: left;
+          font-weight: normal;
+      }
+      .btn-dropdown {
+          color: #454545;
+      }
+      .form-control{
+          height: unset !important;
+      }
+  }
+}
+app-dropdown{
+  button{
+      height: unset !important;
+  }
+}
+
+tag-input {
+  background: transparent;
+  height: auto;
+
+  .ng2-tag-input--focused {
+      background: transparent;
+  }
+
+  .bootstrap3-info.ng2-tag-input {
+      margin-top: -3px !important;
+      height: auto !important;
+      top: -6px !important;
+  }
+
+  div {
+      background: transparent !important;
+  }
+
+  tag-input-form {
+      margin-top: -5px !important;
+  }
+
+  input {
+      background: transparent;
+  }
+}
+
+.overview-details-container {
+  tag-input {
+      background: transparent;
+      height: auto;
+
+      .ng2-tag-input--focused {
+          background: transparent;
+      }
+
+      .bootstrap3-info.ng2-tag-input {
+          margin-top: 4px !important;
+          height: auto !important;
+          top: 0 !important;
+      }
+  }
+}
+
+
+// modal animation
+@keyframes modal-fade {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal {
+  top: -100px;
+  animation: ease-in-out .3s modal-fade;
+
+  &.show {
+    top: 0;
+  }
+    .modal-body {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #921FFE !important;
+}

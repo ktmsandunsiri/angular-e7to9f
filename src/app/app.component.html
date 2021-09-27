@@ -1,0 +1,21 @@
+<h2>Kastane Drop Down Demo</h2>
+<p>Drop downs for kastane</p>
+
+<div class="col-md-3">
+  <div class="form-group screening-question-asnwers">
+    <div class="display-flex">
+      <kastane-dropdown
+        class=""
+        [idField]="'id'"
+        [nameField]="'name'"
+        [small]="true"
+        [outline]="false"
+        [shadow]="true"
+        [selected]="selectedQuestionType"
+        [options]="questionTypes"
+        (change)="changeQuestionTypeTemp($event)"
+      >
+      </kastane-dropdown>
+    </div>
+  </div>
+</div>
